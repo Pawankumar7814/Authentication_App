@@ -1,3 +1,11 @@
+# Steps
+1. Make a front-end page to capture user details 
+    - Create signup and Sign in pages
+
+2. Create Routes and Controllers for signup and sign in pages.
+3. Create schema/model of user in database.
+4. Create routes and controllers for signup and signin APIs.
+
 # Functionalities
 1. user should be able to signup/signin using email and password auth.
 2. user should be able to signup/signin using google auth.

@@ -15,9 +15,13 @@
     <div class="container flex justify-content-center align-item-center">
         <div class="card">
             <div class="card-title">
-                <h1>Log In</h1>
+                <h1> Sign Up to our website!</h1>
             </div>
-            <form action="/user/createSession" method="post">
+            <form action="/user/createUser" method="post">
+                <div class="mb-1">
+                    <label for="Username">Name</label>
+                    <input class="form-control" type="text" name="name" id="Username" placeholder="Pawan" autocomplete="given-name" required>
+                </div>
                 <div class="mb-1">
                     <label for="userEmail">Email</label>
                     <input class="form-control" type="email" name="email" id="userEmail" placeholder="@gmail.com" required>
@@ -26,16 +30,20 @@
                     <label for="userPassword">Password</label>
                     <input class="form-control" type="password" name="password" id="userPassword" placeholder="Password" required>
                 </div>
+                <div class="mb-1">
+                    <label for="userConfirmPassword">Confirm Password</label>
+                    <input class="form-control" type="password" name="confirmPassword" id="userConfirmPassword" placeholder="Confirm Password" required>
+                </div>
                 <div class="mb-1 flex justify-content-center">
                     <!-- <div class="signupLink">
                         <a href="#">Forgot Password?</a>
                     </div> -->
                     <div class="signupLink">
-                        Are you already a user? <a href="/user/signup">Register</a>
+                        Are you already a user? <a href="/user/signin">Sign In</a>
                     </div>
                 </div>
                 <div class="button-group col-center">
-                    <button type="submit" class="btn btn-1">Sign In</button>
+                    <button type="submit" class="btn btn-1">Sign up</button>
                     <button type="button" class="btn btn-1">Cancel</button>
                 </div>
             </form>
