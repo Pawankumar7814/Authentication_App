@@ -1,6 +1,7 @@
 // Import modules
 const express = require('express');
 const app = express(); // Creating an express application
+const port = 3000;
 
 
 
