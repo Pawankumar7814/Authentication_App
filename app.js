@@ -15,4 +15,4 @@ app.listen(port, function(err) {
         console.log(`Server is not started yet because of ${err}`);
     }
     console.log(`Server is running on ${port}`);
-})
+});
