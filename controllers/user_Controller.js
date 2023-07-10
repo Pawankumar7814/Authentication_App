@@ -7,6 +7,11 @@ module.exports.signin = function(req, res) {
     return res.status(200).render('users/signin', { title: " Sign In" });
 }
 
+// Controller for create session (Login the user)
+module.exports.createSession = function(req, res) {
+    return res.render('users/profile');
+}
+
 // Controller for sign up page
 module.exports.signup = function(req, res) {
     return res.status(200).render('users/signup', { title: " Sign up" });
