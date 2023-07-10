@@ -46,3 +46,12 @@ module.exports.createUser = function(req, res) {
 module.exports.profile = function(req, res) {
     return res.status(200).render('users/profile');
 }
+
+
+// Controller for logout
+module.exports.logout = function(req, res) {
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/user/signin');
+    });
+}

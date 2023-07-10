@@ -20,6 +20,8 @@
     - Use mongostore to store the session data of user in database
         - Add library connect-mongo (npm i connect-mongo)
         - use this library in our main file (index/app)
+7. Create API for logout
+    - create route and controller.
 
 # Functionalities
 1. user should be able to signup/signin using email and password auth.

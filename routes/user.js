@@ -20,4 +20,7 @@ const router = express.Router(); // Using express's router
 // Route to profile page
 router.use("/profile", passport.checkAuthentication, userController.profile);
 
+// Route to logout
+router.get('/logout', userController.logout);
+
 module.exports = router;
