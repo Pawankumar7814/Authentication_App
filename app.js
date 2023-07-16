@@ -2,26 +2,28 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('./config/mongoose');
-const DatabaseURL = require('./config/config.json');
+require('dotenv').config;
 const passport = require('passport');
 require('./config/passport-local-strategy'); // It will run directly
+require('./config/passport-google-oauth20-strategy');
 const expressSession = require('express-session');
 const mongoStore = require('connect-mongo');
 
 const app = express(); // Creating an express application
 const port = 3000; //Setting up the port number
 
-app.use(express.urlencoded()); // To read the req.body
+app.use(express.urlencoded({ extended: false })); // To read the req.body
 
 app.use(expressSession({
     name: 'UserData',
     secret: 'userData',
     saveUninitialized: false,
+    resave: false,
     cookie: {
         maxAge: (24 * 60 * 60 * 1000)
     },
     store: mongoStore.create({
-        mongoUrl: DatabaseURL.databaseURI
+        mongoUrl: process.env.DatabaseURI
     })
 }));
 

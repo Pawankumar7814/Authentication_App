@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container flex justify-content-center align-item-center">
+        <div class="card">
+            <div class="card-title">
+                <h1>Log In</h1>
+            </div>
+            <!-- <form action="/user/sendOTP" method="post"> -->
+            <form>
+                <div class="mb-1">
+                    <label for="mobile">Enter your mobile number:</label>
+                    <input class="form-control" type="text" name="mobile" id="mobile_number" placeholder="99232323xx" required>
+                </div>
+                <div class="button-group col-center">
+                    <button type="submit" id="send_otp_button" class="btn btn-1">Verify</button>
+                    <button type="button" class="btn btn-1">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="card">
+            <div class="card-title">
+                <h1>Log In</h1>
+            </div>
+            <form action="/user/sendOTP" method="post">
+                <div class="mb-1">
+                    <label for="mobile">Enter the OTP Sent:</label>
+                    <input class="form-control" type="text" name="mobile" id="mobile" placeholder="" required>
+                </div>
+                <div class="button-group col-center">
+                    <button type="submit" class="btn btn-1">Submit</button>
+                    <button type="button" class="btn btn-1">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/verifyMobile.js"></script>
+</body>
+
+</html>

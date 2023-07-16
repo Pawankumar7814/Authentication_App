@@ -23,6 +23,16 @@
 7. Create API for logout
     - create route and controller.
 
+## Mobile Authentication
+
+8. install fast-two-sms
+9. Create an account in fast-two-sms
+10. use fast-two-sms code to send
+
+## Google Authentication
+11. Create a project in google
+12. 
+
 # Functionalities
 1. user should be able to signup/signin using email and password auth.
 2. user should be able to signup/signin using google auth.
