@@ -8,6 +8,7 @@ const userSchema = new Schema({
     email: { type: String, unique: true, require: true },
     password: { type: String, require: true },
     mobile: { type: String }
+    // mobile_otp: { type: String, default: null, require: true }
 }, {
     timestamps: true
 });
