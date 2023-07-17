@@ -8,7 +8,7 @@ const router = express.Router(); // Using express's router
 // Route to signin page
 {
     router.get("/signin", userController.signin);
-    router.post("/createSession", passport.authenticate('local', { failureRedirect: '/users/signin', }), userController.createSession);
+    router.post("/createSession", passport.authenticate('local', { failureRedirect: '/user/signin', }), userController.createSession);
 }
 
 // Route to signup
@@ -18,7 +18,7 @@ const router = express.Router(); // Using express's router
 }
 
 // Route to profile page
-router.get("/profile", passport.checkAuthentication, userController.profile);
+router.get("/profile/:id", passport.checkAuthentication, userController.profile);
 
 // Mobile authentication
 {

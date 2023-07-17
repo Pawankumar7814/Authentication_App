@@ -7,6 +7,7 @@
     <title>
         <%= title %>
     </title>
+    <link rel="shortcut icon" href="/image/lock.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/signup.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -17,6 +18,10 @@
             <div class="card-title">
                 <h1>Log In</h1>
             </div>
+            <div class="button-container">
+                <button class="btn btn-2"><a href="/user/auth/google">Sign in with Google</a></button>
+            </div>
+            <hr class="mb-40px">
             <form action="/user/createSession" method="post">
                 <div class="mb-1">
                     <label for="userEmail">Email</label>
@@ -26,7 +31,7 @@
                     <label for="userPassword">Password</label>
                     <input class="form-control" type="password" name="password" id="userPassword" placeholder="Password" required>
                 </div>
-                <div class="mb-1 flex justify-content-center">
+                <div class="mb-1 flex justify-content-center mb-40px">
                     <!-- <div class="signupLink">
                         <a href="#">Forgot Password?</a>
                     </div> -->

@@ -1,9 +1,27 @@
-<header>
-    <nav>
-        <ul>
-            <li><a href="/user/signin">Log in</a></li>
-            <li><a href="/user/signup">Sign up</a></li>
-            <li><a href="/user/auth/google">Google signin/signup</a></li>
-        </ul>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="/image/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <% if(locals.user) { %>
+                <li>
+                    <a href="/user/profile/<%= user.id %>">
+                        <%= user.name %>
+                    </a>
+                    <a href="/users/sign-out">Sign out</a>
+                </li>
+                <% } else { %>
+                    <li> <a href="/users/sign-in">Sign in</a></li>
+                    <li> <a href="/users/sign-up">Sign up</a></li>
+                    <% } %>
+        </nav>
+    </header>

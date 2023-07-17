@@ -22,7 +22,7 @@ passport.use(
             callbackURL: "http://localhost:3000/user/auth/google/callback",
         },
         async function(accessToken, refreshToken, profile, cb) {
-            console.log(profile);
+            // console.log(profile);
             try {
                 let user = await User.findOne({ email: profile.emails[0].value });
                 if (user) {

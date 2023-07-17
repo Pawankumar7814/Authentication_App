@@ -7,6 +7,7 @@
     <title>
         <%= title %>
     </title>
+    <link rel="shortcut icon" href="/image/lock.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/signup.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -17,6 +18,10 @@
             <div class="card-title">
                 <h1> Sign Up to our website!</h1>
             </div>
+            <div class="button-container">
+                <button class="btn btn-2"><a href="/user/auth/google">Sign up with Google</a></button>
+            </div>
+            <hr class="mb-40px">
             <form action="/user/createUser" method="post">
                 <div class="mb-1">
                     <label for="Username">Name</label>
