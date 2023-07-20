@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partial/_header.ejs') %>
+    <main>
+        <section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <%- include('../partial/_header.ejs') %>
-        <main>
-            <section>
-                THis is my profile page
-                <!-- <a href="/user/verifyMobile">Verify Mobile Number</a> -->
-                <!-- <a href="/user/logout">Logout</a> -->
-            </section>
-        </main>
-        <%- include('../partial/_footer.ejs') %>
-</body>
-
-</html>
+            <!-- <a href="/user/verifyMobile">Verify Mobile Number</a> -->
+            <!-- <a href="/user/logout">Logout</a> -->
+            <form class="row g-3 uform">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" name="uemail" class="form-control" id="inputEmail4" value="<%= locals.user.email %>" disabled placeholder="Email Id">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">First Name</label>
+                    <input type="text" name="ufname" class="form-control" id="inputEmail4" value="<%= locals.user.name %>" disabled placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">First Name</label>
+                    <input type="text" name="ufname" class="form-control" id="inputEmail4" value="" disabled>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">First Name</label>
+                    <input type="text" name="ufname" class="form-control" id="inputEmail4" value="" disabled>
+                </div>
+            </form>
+        </section>
+    </main>
+    <%- include('../partial/_footer.ejs') %>
