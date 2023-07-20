@@ -12,7 +12,7 @@ module.exports.signin = function(req, res) {
 
 // Controller for create session (Login the user)
 module.exports.createSession = function(req, res) {
-    return res.render("users/profile");
+    return res.render("users/profile", { title: "Profile" });
 };
 
 // Controller for sign up page
@@ -52,7 +52,10 @@ module.exports.createUser = async function(req, res) {
 
 // Controller for Profile page
 module.exports.profile = function(req, res) {
-    return res.status(200).render("users/profile");
+    return res.status(200).render("users/profile", {
+        title: "Profile"
+            // user: locals.user
+    });
 };
 
 // Controller for logout
@@ -114,6 +117,6 @@ module.exports.logout = function(req, res) {
 //     // }
 // }
 
-module.exports.verifyMobile = function(req, res) {
-    return res.render('users/verifyMobile', { title: "Mobile Verification" });
-}
+// module.exports.verifyMobile = function(req, res) {
+//     return res.render('users/verifyMobile', { title: "Mobile Verification" });
+// }

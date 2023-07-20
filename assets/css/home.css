@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* CSS for title */
+
+.glim {
+    padding-right: 2vh;
+}
+
+
+/* CSS for margin */
+
+.field-margin {
+    margin: 1rem;
+}
+
+
+/* CSS for Navbar */
+
+.navcolor {
+    background-color: lavender;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-style: none;
+}
+
+.navbar-inner {
+    background: transparent;
+}
+
+
+/* CSS for shadow */
+
+.shadow {
+    box-shadow: 0 0 1 1 violet;
+}
+
+.bg-color {
+    background-color: white;
+    opacity: 2vh;
+}
+
+
+/* CSS for button */
+
+.bttn {
+    width: 12vw;
+    height: 6vh;
+    background-color: darkgray;
+    border: outset darkblue;
+    margin-left: 70%;
+    border-radius: 10px 0px;
+}
+
+.bttn:hover {
+    background-color: aliceblue;
+    border-color: purple;
+    color: black;
+    border: inset purple;
+    font-weight: bold;
+}
+
+.bttn a:hover {
+    color: black;
+}
+
+.btncolor1 {
+    background-color: purple;
+    color: white;
+    margin: auto 0rem;
+    border-radius: 1rem;
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
+
+.btncolor1:hover {
+    color: black;
+    background-color: white;
+    border-color: violet;
+}
+
+.btncolor {
+    background-color: white;
+    color: black;
+    border: 2px violet solid;
+    border-radius: 1rem;
+    padding-top: 1px;
+    size: 1vw auto;
+    padding-bottom: 1px;
+    margin: auto 1em;
+}
+
+.btncolor:hover {
+    color: white;
+    background-color: purple;
+    border-color: white;
+}
+
+
+/* CSS for body */
+
+.bodyallpages {
+    background-color: #f7d5da;
+}
+
+
+/* Required margin for form content */
+
+.req {
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/* Content Align */
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: "40%";
+}
+
+
+/* CSS for login  */
+
+.login {
+    background-image: url('/images/login-bgimg.jpg');
+    font-weight: bold;
+    margin-left: 40%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* CSS for Signup */
+
+.signup {
+    margin-top: 10%;
+    background-image: url('/images/sign_img.jpg');
+    margin-left: 32%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* CSS for main content of index page */
+
+.maincontent {
+    background-color: royalblue;
+}
+
+
+/* CSS for heading of  */
+
+.heading1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* CSS for Login and signup form */
+
+.uform {
+    margin: 2rem;
+}
+
+
+/* CSS for Cards */
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card {
+    border-color: black;
+    margin: 1vh auto;
+    padding: 1em;
+}
+
+.border {
+    background-color: transparent;
+    border-radius: 1vh;
+    border: solid black;
+}
+
+
+/* CSS for row */
+
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* CSS for Column index page */
+
+.column {
+    float: right;
+    width: 70%;
+}
+
+.sidecol {
+    float: left;
+    width: 25%;
+}
+
+
+/* CSS for blog size of blog page */
+
+.blogsize {
+    width: 75%;
+    margin-left: 18%;
+    margin-right: 2%;
+}
+
+
+/* CSS for background color */
+
+.bgfooter {
+    background: lavender;
+    position: relative;
+    margin-bottom: 0%;
+}
+
+.bgmcolor {
+    background-color: #f7d5da;
+}
+
+
+/* css for contact page's form */
+
+.contact {
+    background-color: black;
+    opacity: 0.3;
+}
+
+
+/* CSS for textarea */
+
+.blogformitem {
+    width: 67vw;
+    height: 10vh;
+}
+
+.blogformtextarea {
+    width: 67vw;
+    height: 40vh;
+    padding: 1em;
+}
+
+
+/* To make responsive layout */
+
+@media screen and (max-width:600px) and (min-width:500px) {
+    .login {
+        margin-top: 12%;
+        margin-left: 20%;
+    }
+    .column {
+        width: 100%;
+    }
+    .column.side,
+    .column.main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .signup {
+        margin-top: 8%;
+        margin-left: 32%;
+    }
+}

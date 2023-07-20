@@ -4,24 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>
+        <%= title %>
+    </title>
     <link rel="shortcut icon" href="/image/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <% if(locals.user) { %>
-                <li>
-                    <a href="/user/profile/<%= user.id %>">
-                        <%= user.name %>
-                    </a>
-                    <a href="/users/sign-out">Sign out</a>
-                </li>
-                <% } else { %>
-                    <li> <a href="/user/signin">Sign in</a></li>
-                    <li> <a href="/user/signup">Sign up</a></li>
-                    <% } %>
+        <nav class="flex navbar ">
+            <ul class="horizontal_list">
+                <li><img src="/image/" alt="Logo"></li>
+            </ul>
+            <ul class="horizontal_list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="horizontal_list">
+                <% if(locals.user) { %>
+                    <li>
+                        <a href="/user/profile/<%= user.id %>">
+                            <%= user.name %>
+                        </a>
+                        <a href="/user/logout">Sign out</a>
+                    </li>
+                    <% } else { %>
+                        <li> <a href="/user/signin">Sign in</a></li>
+                        <li> <a href="/user/signup">Sign up</a></li>
+                        <% } %>
+            </ul>
         </nav>
     </header>

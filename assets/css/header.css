@@ -1,0 +1,10 @@
+header {
+    background-color: lavender;
+    width: 100vw;
+}
+
+.navbar {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
