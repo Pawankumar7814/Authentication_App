@@ -12,7 +12,7 @@ module.exports.signin = function(req, res) {
 
 // Controller for create session (Login the user)
 module.exports.createSession = function(req, res) {
-    return res.render("mainpages/home", { title: "Profile" });
+    return res.render("mainpages/home", { title: "Home" });
 };
 
 // Controller for sign up page
