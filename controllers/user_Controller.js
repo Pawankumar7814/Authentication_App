@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 
 // Controller for sign in page
 module.exports.signin = function(req, res) {
+    if (req.isAuthenticated()) {
+        return res.render("mainpages/home", { title: "Home" });
+    }
     return res.status(200).render("users/signin", { title: " Sign In" });
 };
 
@@ -17,6 +20,9 @@ module.exports.createSession = function(req, res) {
 
 // Controller for sign up page
 module.exports.signup = function(req, res) {
+    if (req.isAuthenticated()) {
+        return res.render("mainpages/home", { title: "Home" });
+    }
     return res.status(200).render("users/signup", { title: " Sign up" });
 };
 
